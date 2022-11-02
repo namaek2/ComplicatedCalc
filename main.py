@@ -24,7 +24,11 @@ def ask():
     while True:
         next_calculation = input("Let's do next calculation? (yes/no): ")
         if next_calculation.upper() == "NO":
-            return 0
+            ask_again = input("Are you sure? (yes/no): ")
+            if ask_again.upper() == "YES":
+                return 0
+            else:
+                return 1
         elif next_calculation.upper() == "YES":
             return 1
         else:
