@@ -1,18 +1,25 @@
+"""Calculation functions for main.py"""
+
+
 # This function adds two numbers
-def add(x, y):
-    return x + y
+def add(num_first, num_second):
+    """add function"""
+    return num_first + num_second
 
 
 # This function subtracts two numbers
-def subtract(x, y):
-    return x - y
+def subtract(num_first, num_second):
+    """subtract function"""
+    return num_first - num_second
 
 
 # This function multiplies two numbers
-def multiply(x, y):
-    return x * y
+def multiply(num_first, num_second):
+    """multiply function"""
+    return num_first * num_second
 
 
 # Need to define divide function.
-def divide(x, y):
-    return x / y
+def divide(num_first, num_second):
+    """divide function"""
+    return num_first / num_second
