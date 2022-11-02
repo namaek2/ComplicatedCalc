@@ -27,6 +27,8 @@ def ask():
             return 0
         elif next_calculation.upper() == "YES":
             return 1
+        else:
+            continue
 
 
 print("Calculator started.")
