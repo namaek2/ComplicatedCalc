@@ -1,23 +1,6 @@
 # Program make a simple calculator
 
-# This function adds two numbers
-def add(x, y):
-    return x + y
-
-
-# This function subtracts two numbers
-def subtract(x, y):
-    return x - y
-
-
-# This function multiplies two numbers
-def multiply(x, y):
-    return x * y
-
-
-# Need to define divide function.
-def divide(x, y):
-    return x / y
+import calculations
 
 
 def ask():
@@ -56,18 +39,18 @@ while True:
         num2 = float(input("Enter second number: "))
 
         if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-            wtw = str(num1) + "+" + str(num2) + "=" + str(add(num1, num2)) + "\n"
+            print(num1, "+", num2, "=", calculations.add(num1, num2))
+            wtw = str(num1) + "+" + str(num2) + "=" + str(calculations.add(num1, num2)) + "\n"
             f.write(wtw)
 
         elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-            wtw = str(num1) + "-" + str(num2) + "=" + str(subtract(num1, num2)) + "\n"
+            print(num1, "-", num2, "=", calculations.subtract(num1, num2))
+            wtw = str(num1) + "-" + str(num2) + "=" + str(calculations.subtract(num1, num2)) + "\n"
             f.write(wtw)
 
         elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-            wtw = str(num1) + "*" + str(num2) + "=" + str(multiply(num1, num2)) + "\n"
+            print(num1, "*", num2, "=", calculations.multiply(num1, num2))
+            wtw = str(num1) + "*" + str(num2) + "=" + str(calculations.multiply(num1, num2)) + "\n"
             f.write(wtw)
 
         elif choice == '4':
@@ -77,8 +60,8 @@ while True:
                 f.write(wtw)
 
             else:
-                print(num1, "/", num2, "=", divide(num1, num2))
-                wtw = str(num1) + "/" + str(num2) + "=" + str(divide(num1, num2)) + "\n"
+                print(num1, "/", num2, "=", calculations.divide(num1, num2))
+                wtw = str(num1) + "/" + str(num2) + "=" + str(calculations.divide(num1, num2)) + "\n"
                 f.write(wtw)
 
         # check if user wants another calculation
