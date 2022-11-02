@@ -28,6 +28,9 @@ print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
 
+filepath = "C:\\Users\\나맥2\\PycharmProjects\\ComplicatedCalc\\calc_log.txt"
+f = open(filepath, 'a')
+
 while True:
     # take input from the user
     choice = input("Enter choice(1/2/3/4): ")
@@ -39,12 +42,18 @@ while True:
 
         if choice == '1':
             print(num1, "+", num2, "=", add(num1, num2))
+            wtw = str(num1) + "+" + str(num2) + "=" + str(add(num1, num2)) + "\n"
+            f.write(wtw)
 
         elif choice == '2':
             print(num1, "-", num2, "=", subtract(num1, num2))
+            wtw = str(num1) + "-" + str(num2) + "=" + str(subtract(num1, num2)) + "\n"
+            f.write(wtw)
 
         elif choice == '3':
             print(num1, "*", num2, "=", multiply(num1, num2))
+            wtw = str(num1) + "*" + str(num2) + "=" + str(multiply(num1, num2)) + "\n"
+            f.write(wtw)
 
         elif choice == '4':
             if num2 == 0:
@@ -52,6 +61,8 @@ while True:
 
             else:
                 print(num1, "/", num2, "=", divide(num1, num2))
+                wtw = str(num1) + "/" + str(num2) + "=" + str(divide(num1, num2)) + "\n"
+                f.write(wtw)
 
         # check if user wants another calculation
         # break the while loop if answer is no
