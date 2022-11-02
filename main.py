@@ -30,7 +30,7 @@ print("4.Divide")
 
 while True:
     # take input from the user
-    choice = input("Enter choice(1/2/3): ")
+    choice = input("Enter choice(1/2/3/4): ")
 
     # check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
@@ -47,7 +47,11 @@ while True:
             print(num1, "*", num2, "=", multiply(num1, num2))
 
         elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
+            if num2 == 0:
+                print("divide by zero err")
+
+            else:
+                print(num1, "/", num2, "=", divide(num1, num2))
 
         # check if user wants another calculation
         # break the while loop if answer is no
@@ -57,5 +61,3 @@ while True:
 
     else:
         print("Invalid Input")
-
-# commit test
