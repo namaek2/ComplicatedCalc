@@ -58,6 +58,8 @@ while True:
         elif choice == '4':
             if num2 == 0:
                 print("divide by zero err")
+                wtw = str(num1) + "/" + str(num2) + "=" + "divide by zero err\n"
+                f.write(wtw)
 
             else:
                 print(num1, "/", num2, "=", divide(num1, num2))
@@ -72,3 +74,7 @@ while True:
 
     else:
         print("Invalid Input")
+        wtw = choice + "Invalid Input\n"
+        f.write(wtw)
+
+f.close()
